@@ -1,0 +1,342 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package process;
+
+import java.sql.*;
+
+/**
+ *
+ * @author Bernard Kapinda
+ */
+public class matches {
+    
+java.lang.String venue;
+java.lang.String location;
+java.lang.String status;
+java.lang.String time;
+java.lang.Integer fifa_id;
+java.lang.Integer home_team_statisticsattempts_on_goal;
+java.lang.Integer home_team_statisticson_target;
+java.lang.Integer home_team_statisticsoff_target;
+java.lang.Integer home_team_statisticsblocked;
+java.lang.Integer home_team_statisticswoodwork;
+java.lang.Integer home_team_statisticscorners;
+java.lang.Integer home_team_statisticsoffsides;
+java.lang.Integer home_team_statisticsball_possession;
+java.lang.Integer home_team_statisticspass_accuracy;
+java.lang.Integer home_team_statisticsnum_passes;
+java.lang.Integer home_team_statisticspasses_completed;
+java.lang.Integer home_team_statisticsdistance_covered;
+java.lang.Integer home_team_statisticsballs_recovered;
+java.lang.Integer home_team_statisticstackles;
+java.lang.Integer home_team_statisticsclearances;
+java.lang.Integer home_team_statisticsyellow_cards;
+java.lang.Boolean home_team_statisticsred_cards;
+java.lang.Integer home_team_statisticsfouls_committed;
+java.lang.String home_team_statisticscountry;
+java.lang.Integer away_team_statisticsattempts_on_goal;
+java.lang.Integer away_team_statisticson_target;
+java.lang.Integer away_team_statisticsoff_target;
+java.lang.Integer away_team_statisticsblocked;
+java.lang.Integer away_team_statisticswoodwork;
+java.lang.Integer away_team_statisticscorners;
+java.lang.Integer away_team_statisticsoffsides;
+java.lang.Integer away_team_statisticsball_possession;
+java.lang.Integer away_team_statisticspass_accuracy;
+java.lang.Integer away_team_statisticsnum_passes;
+java.lang.Integer away_team_statisticspasses_completed;
+java.lang.Integer away_team_statisticsdistance_covered;
+java.lang.Integer away_team_statisticsballs_recovered;
+java.lang.Integer away_team_statisticstackles;
+java.lang.Integer away_team_statisticsclearances;
+java.lang.Integer away_team_statisticsyellow_cards;
+java.lang.Boolean away_team_statisticsred_cards;
+java.lang.Integer away_team_statisticsfouls_committed;
+java.lang.String away_team_statisticscountry;
+java.lang.String datetime;
+java.lang.String last_event_update_at;
+java.lang.String last_score_update_at;
+java.lang.String home_teamcountry;
+java.lang.String home_teamcode;
+java.lang.Integer home_teamgoals;
+java.lang.String away_teamcountry;
+java.lang.String away_teamcode;
+java.lang.Integer away_teamgoals;
+java.lang.String winner;
+java.lang.String winner_code;
+java.lang.Integer home_team_events0id;
+java.lang.String home_team_events0type_of_event;
+java.lang.String home_team_events0player;
+java.lang.String home_team_events0time;
+java.lang.Integer home_team_events1id;
+java.lang.String home_team_events1type_of_event;
+java.lang.String home_team_events1player;
+java.lang.String home_team_events1time;
+java.lang.Integer home_team_events2id;
+java.lang.String home_team_events2type_of_event;
+java.lang.String home_team_events2player;
+java.lang.String home_team_events2time;
+java.lang.Integer home_team_events3id;
+java.lang.String home_team_events3type_of_event;
+java.lang.String home_team_events3player;
+java.sql.Date home_team_events3time;
+java.lang.Integer home_team_events4id;
+java.lang.String home_team_events4type_of_event;
+java.lang.String home_team_events4player;
+java.sql.Date home_team_events4time;
+java.lang.Integer home_team_events5id;
+java.lang.String home_team_events5type_of_event;
+java.lang.String home_team_events5player;
+java.sql.Date home_team_events5time;
+java.lang.Integer home_team_events6id;
+java.lang.String home_team_events6type_of_event;
+java.lang.String home_team_events6player;
+java.lang.String home_team_events6time;
+java.lang.Integer home_team_events7id;
+java.lang.String home_team_events7type_of_event;
+java.lang.String home_team_events7player;
+java.lang.String home_team_events7time;
+java.lang.Integer home_team_events8id;
+java.lang.String home_team_events8type_of_event;
+java.lang.String home_team_events8player;
+java.lang.String home_team_events8time;
+java.lang.Integer home_team_events9id;
+java.lang.String home_team_events9type_of_event;
+java.lang.String home_team_events9player;
+java.sql.Date home_team_events9time;
+java.lang.Integer home_team_events10id;
+java.lang.String home_team_events10type_of_event;
+java.lang.String home_team_events10player;
+java.lang.String home_team_events10time;
+java.lang.Integer home_team_events11id;
+java.lang.String home_team_events11type_of_event;
+java.lang.String home_team_events11player;
+java.lang.String home_team_events11time;
+java.lang.Integer away_team_events0id;
+java.lang.String away_team_events0type_of_event;
+java.lang.String away_team_events0player;
+java.lang.String away_team_events0time;
+java.lang.Integer away_team_events1id;
+java.lang.String away_team_events1type_of_event;
+java.lang.String away_team_events1player;
+java.lang.String away_team_events1time;
+java.lang.Integer away_team_events2id;
+java.lang.String away_team_events2type_of_event;
+java.lang.String away_team_events2player;
+java.lang.String away_team_events2time;
+java.lang.Integer away_team_events3id;
+java.lang.String away_team_events3type_of_event;
+java.lang.String away_team_events3player;
+java.sql.Date away_team_events3time;
+java.lang.Integer away_team_events4id;
+java.lang.String away_team_events4type_of_event;
+java.lang.String away_team_events4player;
+java.sql.Date away_team_events4time;
+java.lang.Integer away_team_events5id;
+java.lang.String away_team_events5type_of_event;
+java.lang.String away_team_events5player;
+java.sql.Date away_team_events5time;
+java.lang.Integer away_team_events6id;
+java.lang.String away_team_events6type_of_event;
+java.lang.String away_team_events6player;
+java.lang.String away_team_events6time;
+java.lang.Integer away_team_events7id;
+java.lang.String away_team_events7type_of_event;
+java.lang.String away_team_events7player;
+java.lang.String away_team_events7time;
+java.lang.Integer away_team_events8id;
+java.lang.String away_team_events8type_of_event;
+java.lang.String away_team_events8player;
+java.lang.String away_team_events8time;
+java.lang.Integer away_team_events9id;
+java.lang.String away_team_events9type_of_event;
+java.lang.String away_team_events9player;
+java.sql.Date away_team_events9time;
+java.lang.Integer away_team_events10id;
+java.lang.String away_team_events10type_of_event;
+java.lang.String away_team_events10player;
+java.lang.String away_team_events10time;
+java.lang.String home_team_statistics;
+java.lang.String away_team_statistics;
+java.lang.String home_teamteam_tbd;
+java.lang.String away_teamteam_tbd;
+
+    public matches(String venue, String location, String status, String time, Integer fifa_id, Integer home_team_statisticsattempts_on_goal, Integer home_team_statisticson_target, Integer home_team_statisticsoff_target, Integer home_team_statisticsblocked, Integer home_team_statisticswoodwork, Integer home_team_statisticscorners, Integer home_team_statisticsoffsides, Integer home_team_statisticsball_possession, Integer home_team_statisticspass_accuracy, Integer home_team_statisticsnum_passes, Integer home_team_statisticspasses_completed, Integer home_team_statisticsdistance_covered, Integer home_team_statisticsballs_recovered, Integer home_team_statisticstackles, Integer home_team_statisticsclearances, Integer home_team_statisticsyellow_cards, Boolean home_team_statisticsred_cards, Integer home_team_statisticsfouls_committed, String home_team_statisticscountry, Integer away_team_statisticsattempts_on_goal, Integer away_team_statisticson_target, Integer away_team_statisticsoff_target, Integer away_team_statisticsblocked, Integer away_team_statisticswoodwork, Integer away_team_statisticscorners, Integer away_team_statisticsoffsides, Integer away_team_statisticsball_possession, Integer away_team_statisticspass_accuracy, Integer away_team_statisticsnum_passes, Integer away_team_statisticspasses_completed, Integer away_team_statisticsdistance_covered, Integer away_team_statisticsballs_recovered, Integer away_team_statisticstackles, Integer away_team_statisticsclearances, Integer away_team_statisticsyellow_cards, Boolean away_team_statisticsred_cards, Integer away_team_statisticsfouls_committed, String away_team_statisticscountry, String datetime, String last_event_update_at, String last_score_update_at, String home_teamcountry, String home_teamcode, Integer home_teamgoals, String away_teamcountry, String away_teamcode, Integer away_teamgoals, String winner, String winner_code, Integer home_team_events0id, String home_team_events0type_of_event, String home_team_events0player, String home_team_events0time, Integer home_team_events1id, String home_team_events1type_of_event, String home_team_events1player, String home_team_events1time, Integer home_team_events2id, String home_team_events2type_of_event, String home_team_events2player, String home_team_events2time, Integer home_team_events3id, String home_team_events3type_of_event, String home_team_events3player, Date home_team_events3time, Integer home_team_events4id, String home_team_events4type_of_event, String home_team_events4player, Date home_team_events4time, Integer home_team_events5id, String home_team_events5type_of_event, String home_team_events5player, Date home_team_events5time, Integer home_team_events6id, String home_team_events6type_of_event, String home_team_events6player, String home_team_events6time, Integer home_team_events7id, String home_team_events7type_of_event, String home_team_events7player, String home_team_events7time, Integer home_team_events8id, String home_team_events8type_of_event, String home_team_events8player, String home_team_events8time, Integer home_team_events9id, String home_team_events9type_of_event, String home_team_events9player, Date home_team_events9time, Integer home_team_events10id, String home_team_events10type_of_event, String home_team_events10player, String home_team_events10time, Integer home_team_events11id, String home_team_events11type_of_event, String home_team_events11player, String home_team_events11time, Integer away_team_events0id, String away_team_events0type_of_event, String away_team_events0player, String away_team_events0time, Integer away_team_events1id, String away_team_events1type_of_event, String away_team_events1player, String away_team_events1time, Integer away_team_events2id, String away_team_events2type_of_event, String away_team_events2player, String away_team_events2time, Integer away_team_events3id, String away_team_events3type_of_event, String away_team_events3player, Date away_team_events3time, Integer away_team_events4id, String away_team_events4type_of_event, String away_team_events4player, Date away_team_events4time, Integer away_team_events5id, String away_team_events5type_of_event, String away_team_events5player, Date away_team_events5time, Integer away_team_events6id, String away_team_events6type_of_event, String away_team_events6player, String away_team_events6time, Integer away_team_events7id, String away_team_events7type_of_event, String away_team_events7player, String away_team_events7time, Integer away_team_events8id, String away_team_events8type_of_event, String away_team_events8player, String away_team_events8time, Integer away_team_events9id, String away_team_events9type_of_event, String away_team_events9player, Date away_team_events9time, Integer away_team_events10id, String away_team_events10type_of_event, String away_team_events10player, String away_team_events10time, String home_team_statistics, String away_team_statistics, String home_teamteam_tbd, String away_teamteam_tbd) {
+        this.venue = venue;
+        this.location = location;
+        this.status = status;
+        this.time = time;
+        this.fifa_id = fifa_id;
+        this.home_team_statisticsattempts_on_goal = home_team_statisticsattempts_on_goal;
+        this.home_team_statisticson_target = home_team_statisticson_target;
+        this.home_team_statisticsoff_target = home_team_statisticsoff_target;
+        this.home_team_statisticsblocked = home_team_statisticsblocked;
+        this.home_team_statisticswoodwork = home_team_statisticswoodwork;
+        this.home_team_statisticscorners = home_team_statisticscorners;
+        this.home_team_statisticsoffsides = home_team_statisticsoffsides;
+        this.home_team_statisticsball_possession = home_team_statisticsball_possession;
+        this.home_team_statisticspass_accuracy = home_team_statisticspass_accuracy;
+        this.home_team_statisticsnum_passes = home_team_statisticsnum_passes;
+        this.home_team_statisticspasses_completed = home_team_statisticspasses_completed;
+        this.home_team_statisticsdistance_covered = home_team_statisticsdistance_covered;
+        this.home_team_statisticsballs_recovered = home_team_statisticsballs_recovered;
+        this.home_team_statisticstackles = home_team_statisticstackles;
+        this.home_team_statisticsclearances = home_team_statisticsclearances;
+        this.home_team_statisticsyellow_cards = home_team_statisticsyellow_cards;
+        this.home_team_statisticsred_cards = home_team_statisticsred_cards;
+        this.home_team_statisticsfouls_committed = home_team_statisticsfouls_committed;
+        this.home_team_statisticscountry = home_team_statisticscountry;
+        this.away_team_statisticsattempts_on_goal = away_team_statisticsattempts_on_goal;
+        this.away_team_statisticson_target = away_team_statisticson_target;
+        this.away_team_statisticsoff_target = away_team_statisticsoff_target;
+        this.away_team_statisticsblocked = away_team_statisticsblocked;
+        this.away_team_statisticswoodwork = away_team_statisticswoodwork;
+        this.away_team_statisticscorners = away_team_statisticscorners;
+        this.away_team_statisticsoffsides = away_team_statisticsoffsides;
+        this.away_team_statisticsball_possession = away_team_statisticsball_possession;
+        this.away_team_statisticspass_accuracy = away_team_statisticspass_accuracy;
+        this.away_team_statisticsnum_passes = away_team_statisticsnum_passes;
+        this.away_team_statisticspasses_completed = away_team_statisticspasses_completed;
+        this.away_team_statisticsdistance_covered = away_team_statisticsdistance_covered;
+        this.away_team_statisticsballs_recovered = away_team_statisticsballs_recovered;
+        this.away_team_statisticstackles = away_team_statisticstackles;
+        this.away_team_statisticsclearances = away_team_statisticsclearances;
+        this.away_team_statisticsyellow_cards = away_team_statisticsyellow_cards;
+        this.away_team_statisticsred_cards = away_team_statisticsred_cards;
+        this.away_team_statisticsfouls_committed = away_team_statisticsfouls_committed;
+        this.away_team_statisticscountry = away_team_statisticscountry;
+        this.datetime = datetime;
+        this.last_event_update_at = last_event_update_at;
+        this.last_score_update_at = last_score_update_at;
+        this.home_teamcountry = home_teamcountry;
+        this.home_teamcode = home_teamcode;
+        this.home_teamgoals = home_teamgoals;
+        this.away_teamcountry = away_teamcountry;
+        this.away_teamcode = away_teamcode;
+        this.away_teamgoals = away_teamgoals;
+        this.winner = winner;
+        this.winner_code = winner_code;
+        this.home_team_events0id = home_team_events0id;
+        this.home_team_events0type_of_event = home_team_events0type_of_event;
+        this.home_team_events0player = home_team_events0player;
+        this.home_team_events0time = home_team_events0time;
+        this.home_team_events1id = home_team_events1id;
+        this.home_team_events1type_of_event = home_team_events1type_of_event;
+        this.home_team_events1player = home_team_events1player;
+        this.home_team_events1time = home_team_events1time;
+        this.home_team_events2id = home_team_events2id;
+        this.home_team_events2type_of_event = home_team_events2type_of_event;
+        this.home_team_events2player = home_team_events2player;
+        this.home_team_events2time = home_team_events2time;
+        this.home_team_events3id = home_team_events3id;
+        this.home_team_events3type_of_event = home_team_events3type_of_event;
+        this.home_team_events3player = home_team_events3player;
+        this.home_team_events3time = home_team_events3time;
+        this.home_team_events4id = home_team_events4id;
+        this.home_team_events4type_of_event = home_team_events4type_of_event;
+        this.home_team_events4player = home_team_events4player;
+        this.home_team_events4time = home_team_events4time;
+        this.home_team_events5id = home_team_events5id;
+        this.home_team_events5type_of_event = home_team_events5type_of_event;
+        this.home_team_events5player = home_team_events5player;
+        this.home_team_events5time = home_team_events5time;
+        this.home_team_events6id = home_team_events6id;
+        this.home_team_events6type_of_event = home_team_events6type_of_event;
+        this.home_team_events6player = home_team_events6player;
+        this.home_team_events6time = home_team_events6time;
+        this.home_team_events7id = home_team_events7id;
+        this.home_team_events7type_of_event = home_team_events7type_of_event;
+        this.home_team_events7player = home_team_events7player;
+        this.home_team_events7time = home_team_events7time;
+        this.home_team_events8id = home_team_events8id;
+        this.home_team_events8type_of_event = home_team_events8type_of_event;
+        this.home_team_events8player = home_team_events8player;
+        this.home_team_events8time = home_team_events8time;
+        this.home_team_events9id = home_team_events9id;
+        this.home_team_events9type_of_event = home_team_events9type_of_event;
+        this.home_team_events9player = home_team_events9player;
+        this.home_team_events9time = home_team_events9time;
+        this.home_team_events10id = home_team_events10id;
+        this.home_team_events10type_of_event = home_team_events10type_of_event;
+        this.home_team_events10player = home_team_events10player;
+        this.home_team_events10time = home_team_events10time;
+        this.home_team_events11id = home_team_events11id;
+        this.home_team_events11type_of_event = home_team_events11type_of_event;
+        this.home_team_events11player = home_team_events11player;
+        this.home_team_events11time = home_team_events11time;
+        this.away_team_events0id = away_team_events0id;
+        this.away_team_events0type_of_event = away_team_events0type_of_event;
+        this.away_team_events0player = away_team_events0player;
+        this.away_team_events0time = away_team_events0time;
+        this.away_team_events1id = away_team_events1id;
+        this.away_team_events1type_of_event = away_team_events1type_of_event;
+        this.away_team_events1player = away_team_events1player;
+        this.away_team_events1time = away_team_events1time;
+        this.away_team_events2id = away_team_events2id;
+        this.away_team_events2type_of_event = away_team_events2type_of_event;
+        this.away_team_events2player = away_team_events2player;
+        this.away_team_events2time = away_team_events2time;
+        this.away_team_events3id = away_team_events3id;
+        this.away_team_events3type_of_event = away_team_events3type_of_event;
+        this.away_team_events3player = away_team_events3player;
+        this.away_team_events3time = away_team_events3time;
+        this.away_team_events4id = away_team_events4id;
+        this.away_team_events4type_of_event = away_team_events4type_of_event;
+        this.away_team_events4player = away_team_events4player;
+        this.away_team_events4time = away_team_events4time;
+        this.away_team_events5id = away_team_events5id;
+        this.away_team_events5type_of_event = away_team_events5type_of_event;
+        this.away_team_events5player = away_team_events5player;
+        this.away_team_events5time = away_team_events5time;
+        this.away_team_events6id = away_team_events6id;
+        this.away_team_events6type_of_event = away_team_events6type_of_event;
+        this.away_team_events6player = away_team_events6player;
+        this.away_team_events6time = away_team_events6time;
+        this.away_team_events7id = away_team_events7id;
+        this.away_team_events7type_of_event = away_team_events7type_of_event;
+        this.away_team_events7player = away_team_events7player;
+        this.away_team_events7time = away_team_events7time;
+        this.away_team_events8id = away_team_events8id;
+        this.away_team_events8type_of_event = away_team_events8type_of_event;
+        this.away_team_events8player = away_team_events8player;
+        this.away_team_events8time = away_team_events8time;
+        this.away_team_events9id = away_team_events9id;
+        this.away_team_events9type_of_event = away_team_events9type_of_event;
+        this.away_team_events9player = away_team_events9player;
+        this.away_team_events9time = away_team_events9time;
+        this.away_team_events10id = away_team_events10id;
+        this.away_team_events10type_of_event = away_team_events10type_of_event;
+        this.away_team_events10player = away_team_events10player;
+        this.away_team_events10time = away_team_events10time;
+        this.home_team_statistics = home_team_statistics;
+        this.away_team_statistics = away_team_statistics;
+        this.home_teamteam_tbd = home_teamteam_tbd;
+        this.away_teamteam_tbd = away_teamteam_tbd;
+    }
+ 
+ public static void getColumns(){
+   try{    
+            
+      Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fifa18?" + "user=root&password=20152016"); 
+      
+    Statement st =   con.createStatement();
+    ResultSet rs = st.executeQuery("SELECT * FROM matches");
+
+    ResultSetMetaData rsMetaData = rs.getMetaData();
+
+    int numberOfColumns = rsMetaData.getColumnCount();
+    System.out.println("resultSet MetaData column Count=" + numberOfColumns);
+
+    for (int i = 1; i <= numberOfColumns; i++) {
+     
+      // get the column's name.
+      System.out.println(rsMetaData.getColumnClassName(i)+ " "+rsMetaData.getColumnName(i)+";");
+    }}catch(Exception e){
+            
+            }
+ }
+}
